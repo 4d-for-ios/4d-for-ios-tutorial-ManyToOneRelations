@@ -146,24 +146,6 @@
 				"shortLabel": "Category id",
 				"valueType": "number",
 				"type": 4
-			},
-			"TaskCategory": {
-				"kind": "relatedEntity",
-				"label": "Task Category",
-				"shortLabel": "Task Categ",
-				"relatedDataClass": "Category",
-				"relatedTableNumber": 3,
-				"inverseName": "TaskCategory_return",
-				"2": {
-					"name": "Name",
-					"kind": "storage",
-					"fieldType": 0,
-					"valueType": "string",
-					"label": "Name",
-					"shortLabel": "Name",
-					"type": 10,
-					"fieldNumber": 2
-				}
 			}
 		}
 	},
@@ -203,11 +185,11 @@
 					"path": "DueDate"
 				},
 				{
-					"name": "TaskCategory.Name",
+					"fieldNumber": 9,
+					"name": "CategoryID",
 					"kind": "storage",
-					"fieldType": 0,
-					"path": "TaskCategory.Name",
-					"fieldNumber": 2
+					"fieldType": 9,
+					"path": "CategoryID"
 				},
 				null,
 				null
@@ -226,11 +208,11 @@
 					"path": "Title"
 				},
 				{
-					"name": "TaskCategory.Name",
+					"fieldNumber": 9,
+					"name": "CategoryID",
 					"kind": "storage",
-					"fieldType": 0,
-					"path": "TaskCategory.Name",
-					"fieldNumber": 2
+					"fieldType": 9,
+					"path": "CategoryID"
 				},
 				{
 					"fieldNumber": 10,
@@ -262,5 +244,6 @@
 				}
 			]
 		}
-	}
+	},
+	"allowStructureAdjustments": 1
 }
