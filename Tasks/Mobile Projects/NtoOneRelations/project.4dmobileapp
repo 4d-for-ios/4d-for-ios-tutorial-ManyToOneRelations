@@ -1,0 +1,266 @@
+{
+	"info": {
+		"version": 8,
+		"target": [
+			"iOS",
+			"android"
+		],
+		"ideVersion": "1970",
+		"ideBuildVersion": "282092",
+		"componentBuild": 282092
+	},
+	"product": {
+		"name": "My App",
+		"version": "1.0",
+		"copyright": "©2022 All rights reserved",
+		"bundleIdentifier": "com.myCompany.My-App"
+	},
+	"organization": {
+		"name": "My Company",
+		"teamId": "BSE3R8CQZT",
+		"id": "com.myCompany",
+		"identifier": "com.myCompany.MYApp"
+	},
+	"developer": {
+		"name": "Vanessa Talbot",
+		"id": ""
+	},
+	"server": {
+		"urls": {
+			"production": ""
+		}
+	},
+	"main": {
+		"navigationTitle": "My App",
+		"navigationType": "tabbar",
+		"order": [
+			"1"
+		]
+	},
+	"dataSource": {
+		"source": "local",
+		"doNotGenerateDataAtEachBuild": false,
+		"doNotExportImages": false
+	},
+	"ui": {
+		"navigationTransition": "PresentSlideSegue",
+		"dominantColor": "rgb(78,142,245)"
+	},
+	"dataModel": {
+		"1": {
+			"": {
+				"name": "Tasks",
+				"label": "Tasks",
+				"shortLabel": "Tasks",
+				"primaryKey": "ID",
+				"embedded": true,
+				"icon": "/TaskTabIcon.png"
+			},
+			"11": {
+				"fieldNumber": 11,
+				"name": "CompletePercentage",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "Complete Percentage",
+				"shortLabel": "Complete Percentage",
+				"valueType": "number",
+				"type": 4
+			},
+			"10": {
+				"fieldNumber": 10,
+				"name": "Description",
+				"kind": "storage",
+				"fieldType": 2,
+				"label": "Description",
+				"shortLabel": "Description",
+				"valueType": "string",
+				"type": 10
+			},
+			"6": {
+				"fieldNumber": 6,
+				"name": "DueDate",
+				"kind": "storage",
+				"fieldType": 4,
+				"label": "Due Date",
+				"shortLabel": "Due Date",
+				"valueType": "date",
+				"type": 8
+			},
+			"12": {
+				"fieldNumber": 12,
+				"name": "Email",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Email",
+				"shortLabel": "Email",
+				"valueType": "string",
+				"type": 10
+			},
+			"8": {
+				"fieldNumber": 8,
+				"name": "Priority",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "Priority",
+				"shortLabel": "Priority",
+				"valueType": "number",
+				"type": 4,
+				"format": "/PriorityIntegerToImage"
+			},
+			"5": {
+				"fieldNumber": 5,
+				"name": "StartDate",
+				"kind": "storage",
+				"fieldType": 4,
+				"label": "Start Date",
+				"shortLabel": "Start Date",
+				"valueType": "date",
+				"type": 8
+			},
+			"7": {
+				"fieldNumber": 7,
+				"name": "Status",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "Status",
+				"shortLabel": "Status",
+				"valueType": "number",
+				"type": 4
+			},
+			"2": {
+				"fieldNumber": 2,
+				"name": "Title",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Title",
+				"shortLabel": "Title",
+				"valueType": "string",
+				"type": 10
+			},
+			"9": {
+				"fieldNumber": 9,
+				"name": "CategoryID",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "Category id",
+				"shortLabel": "Category id",
+				"valueType": "number",
+				"type": 4
+			},
+			"TaskCategory": {
+				"kind": "relatedEntity",
+				"label": "Task Category",
+				"shortLabel": "Task Categ",
+				"relatedDataClass": "Category",
+				"relatedTableNumber": 3,
+				"inverseName": "TaskCategory_return",
+				"2": {
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"valueType": "string",
+					"label": "Name",
+					"shortLabel": "Name",
+					"type": 10,
+					"fieldNumber": 2
+				}
+			}
+		}
+	},
+	"list": {
+		"1": {
+			"form": "/form-list-FiveLabelsList.zip",
+			"fields": [
+				{
+					"fieldNumber": 2,
+					"name": "Title",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Title"
+				},
+				{
+					"fieldNumber": 8,
+					"name": "Priority",
+					"kind": "storage",
+					"fieldType": 9,
+					"path": "Priority",
+					"label": "Priority",
+					"shortLabel": "Priority",
+					"format": "/PriorityIntegerToImage"
+				},
+				{
+					"fieldNumber": 11,
+					"name": "CompletePercentage",
+					"kind": "storage",
+					"fieldType": 9,
+					"path": "CompletePercentage"
+				},
+				{
+					"fieldNumber": 6,
+					"name": "DueDate",
+					"kind": "storage",
+					"fieldType": 4,
+					"path": "DueDate"
+				},
+				{
+					"name": "TaskCategory.Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "TaskCategory.Name",
+					"fieldNumber": 2
+				},
+				null,
+				null
+			]
+		}
+	},
+	"detail": {
+		"1": {
+			"form": "Cards",
+			"fields": [
+				{
+					"fieldNumber": 2,
+					"name": "Title",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Title"
+				},
+				{
+					"name": "TaskCategory.Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "TaskCategory.Name",
+					"fieldNumber": 2
+				},
+				{
+					"fieldNumber": 10,
+					"name": "Description",
+					"kind": "storage",
+					"fieldType": 2,
+					"path": "Description"
+				},
+				{
+					"fieldNumber": 11,
+					"name": "CompletePercentage",
+					"kind": "storage",
+					"fieldType": 9,
+					"path": "CompletePercentage"
+				},
+				{
+					"fieldNumber": 5,
+					"name": "StartDate",
+					"kind": "storage",
+					"fieldType": 4,
+					"path": "StartDate"
+				},
+				{
+					"fieldNumber": 6,
+					"name": "DueDate",
+					"kind": "storage",
+					"fieldType": 4,
+					"path": "DueDate"
+				}
+			]
+		}
+	}
+}
